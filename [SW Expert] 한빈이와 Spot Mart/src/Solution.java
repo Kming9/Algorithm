@@ -31,7 +31,7 @@ public class Solution {
 				}
 			});
 			
-			s = bi(M, inputs);
+			s = bs(M, inputs);
 			if(M==inputs[s]) s+=1;
 			
 			int temp, max = -1;
@@ -51,11 +51,10 @@ public class Solution {
 			}
 			bw.append("#"+i+" "+max+"\n");
 		}
-		bw.flush();
 		bw.close();
 	}
 
-	private static int bi(int target, Integer[] inputs) {
+	private static int bs(int target, Integer[] inputs) {
 		int mid = 0, left = 0, right = inputs.length-1;
 		
 		while(right >= left) {
